@@ -1,0 +1,152 @@
+LISTA DELLE CLASSI
+
+------------------------------------
+Rilevazione
+------------------------------------
+nome: String;
+valore: int;
+unitaDiMisura: String;
+minimo: int;
+massimo: int;
+------------------------------------
+------------------------------------
+
+
+
+--------------------------------------------------
+CategoriaSensore
+--------------------------------------------------
+nome: String;
+descrizione: String;
+informazioni: ArrayList<Rilevazione>;
+--------------------------------------------------
+aggiungiRilevazione(String,int,int,int);
+--------------------------------------------------
+
+
+
+---------------------------------------
+Sensore
+---------------------------------------
+nome: String;
+categoria: CategoriaSensore;
+---------------------------------------
+leggiInformazioni();
+---------------------------------------
+
+
+
+---------------------------------------
+ModOperativa
+---------------------------------------
+nome: String;
+parametro: int; versioni succ.
+---------------------------------------
+---------------------------------------
+-------------------------------------------------
+CategoriaAttuatore
+-------------------------------------------------
+nome: String;
+descrizione: String;
+modalita: ArrayList<ModOperativa>;
+stato: bool;
+-------------------------------------------------
+aggiungiModOperativa(String,int);
+-------------------------------------------------
+
+
+
+---------------------------------------
+Attuatore
+---------------------------------------
+nome: String;
+categoria: CategoriaAttuatore;
+----------------------------------------
+aggiungiModOperativa(String);
+aziona();
+blocca();
+----------------------------------------
+
+
+
+-----------------------------------------------------
+Artefatto
+-----------------------------------------------------
+nome: String;
+attuatoriCollegati: ArrayList<Attuatore>;
+sensoriCollegati: ArrayList<Sensore>;
+-----------------------------------------------------
+collegaSensore(String);
+collegaAttuatore(String);
+visualizzaSensoriCollegati();
+visualizzaAttuatoriCollegati();
+-----------------------------------------------------
+
+
+
+
+
+
+
+
+----------------------------------------
+Stanza
+----------------------------------------
+nome: String;
+artefatti: ArrayList<Artefatto>;
+sensori: ArrayList<Sensore>;
+attuatori: ArrayList<Attuatori>;
+----------------------------------------
+aggiungiArtefatto(String);
+aggiungiSensore(String);
+aggiungiAttuatore(String);
+visualizzaArtefatti();
+visualizzaSensori();
+visualizzaAttuatori();
+----------------------------------------
+
+
+
+--------------------------------------------------
+UnitaImmobiliare
+--------------------------------------------------
+nome: String;
+tipologia: String;
+stanze: ArrayList<Stanza>;
+sensori: ArrayList<Sensore>;
+attuatori: ArrayList<Attuatore>;
+artefatti: ArrayList<Artefatto>;
+--------------------------------------------------
+aggiungiStanza(String);
+visualizzaElencoStanze();
+nuovoSensore(String,String);
+nuovoAttuatore(String,String);
+nuovoArtefatto(String,String);
+modificaStanza(Stanza);
+modificaSensore(Sensore);
+modificaAttuatore(Attuatore);
+modificaArtefatto(Artefatto);
+--------------------------------------------------
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+SistemaDomotico
+-----------------------------------------------------------------
+unitaImmobiliari: ArrayList<UnitaImmobiliare>;
+categorieSensori: ArrayList<CategoriaSensore>;
+categorieAttuatori: ArrayList<CtegoriaAttuatore>;
+-----------------------------------------------------------------
+aggiungiUnitaImmobiliare(String,String);
+visualizzaElencoUnitaImmobiliari();
+aggiungiCategoriaSensori(String,String);
+visualizzaElencoCategorieSensori();
+aggiungiCategoriaAttuatori(String,String);
+visualizzaElencoCategorieAttuatori();
+modificaUnitaImmobiliare(UnitaImmobiliare);
+-----------------------------------------------------------------

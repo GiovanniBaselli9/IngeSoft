@@ -1,0 +1,6 @@
+Categoria di sensori: sensori
+Descrizione: belli
+Stato: true
+Categoria di sensori: cavalli
+Descrizione: bellisimi
+Stato: true
